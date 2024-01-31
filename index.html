@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    
+    <div id="wrapper">
+        <h2>celcius to fahrenheit converter</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="temperature in celcius">
+        
+        </div>
+       <div id="button">
+        <button type="submit" onclick=convert()>Convert</button>
+       </div> 
+       <div id="result">
+        
+    </div>
+    
+    </div>
+
+    <script>
+        function convert(){
+        let celval= Number(document.getElementById("input").value);
+        let fahval = (9/5 * celval) + 32;
+        let result= document.getElementById("result");
+        result.innerHTML=fahval.toFixed(3) + "inches";
+        }
+    </script>
+</body>
+</html>
